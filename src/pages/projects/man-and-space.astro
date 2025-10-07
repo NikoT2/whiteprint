@@ -1,0 +1,27 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ProjectPage from "../../components/ProjectPage.astro";
+
+const projectData = {
+  title: "MAN AND SPACE",
+  description: [
+    "Man & Space is a personal art project shot and developed in Iceland. The landscape scenery was captured along the way of golden circle, the country's most renowned sightseeing route. Over the course of took two weeks, the project took shape through arduous treks of relentless exploration, filmed in the midst of Iceland's otherworldly nature.",
+    "The visual storytelling in this piece explores and contemplates the mystery of human relationship with space. We sought to reconstruct the genuine sense of reverential awe and overwhelming grip that immense, gaping nature exerts on human psyche.",
+    "The long shots of vast expanses and mountain ranges emphasize human fragility and vulnerability, before nature's immense and indifferent gaze. Yet, it is precisely the smallness and seeming inconspicuousness that renders human presence significant and valuable.",
+  ],
+  images: [
+    "/src/assets/IMG_5207.jpeg",
+    "/src/assets/IMG_5210.jpeg",
+    "/src/assets/IMG_5211.jpeg",
+  ],
+  video: {
+    platform: "vimeo" as const,
+    id: "1003148792",
+    title: "Man and Space - Iceland Project",
+  },
+};
+---
+
+<Layout>
+  <ProjectPage {...projectData} />
+</Layout>

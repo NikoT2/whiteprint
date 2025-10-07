@@ -1,0 +1,24 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ProjectPage from "../../components/ProjectPage.astro";
+
+const projectData = {
+  title: "Thamar de Létay",
+  description: [],
+  images: [
+    "/src/assets/IMG_5234.jpeg",
+    "/src/assets/IMG_5235.jpeg",
+    "/src/assets/IMG_5236.jpeg",
+    "/src/assets/IMG_5237.jpeg",
+  ],
+  video: {
+    platform: "facebook" as const,
+    id: "https://www.facebook.com/IDFI.official/videos/1406966136522222/",
+    title: "Thamar de Létay",
+  },
+};
+---
+
+<Layout>
+  <ProjectPage {...projectData} />
+</Layout>

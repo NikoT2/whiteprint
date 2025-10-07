@@ -1,0 +1,27 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ProjectPage from "../../components/ProjectPage.astro";
+
+const projectData = {
+  title: "Discover Gori",
+  description: [
+    "Discover Gori is a work that aimed to explore the lesser-known corners of the city, and get acquainted with its rich culture, history, iconic stories, and famous figures associated with it.",
+    "The central challenge of this project consisted in delivering a high-quality advertisement with only a one-man crew and limited resources This experience proved vital in honing skills and problem-solving abilities that have since become invaluable to our future projects.",
+  ],
+  images: [
+    "/src/assets/IMG_5220.jpeg",
+    "/src/assets/IMG_5223.jpeg",
+    "/src/assets/IMG_5224.jpeg",
+    "/src/assets/IMG_5225.jpeg",
+  ],
+  video: {
+    platform: "facebook" as const,
+    id: "https://www.facebook.com/IDFI.official/videos/903276671004735/",
+    title: "Discover Gori",
+  },
+};
+---
+
+<Layout>
+  <ProjectPage {...projectData} />
+</Layout>

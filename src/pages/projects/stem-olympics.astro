@@ -1,0 +1,24 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ProjectPage from "../../components/ProjectPage.astro";
+
+const projectData = {
+  title: "Stem Olympics",
+  description: [],
+  images: [
+    "/src/assets/IMG_5260.jpeg",
+    "/src/assets/IMG_5261.jpeg",
+    "/src/assets/IMG_5262.jpeg",
+    "/src/assets/IMG_5263.jpeg",
+  ],
+  video: {
+    platform: "facebook" as const,
+    id: "https://www.facebook.com/IDFI.official/videos/537019372508345/",
+    title: "Stem Olympics",
+  },
+};
+---
+
+<Layout>
+  <ProjectPage {...projectData} />
+</Layout>

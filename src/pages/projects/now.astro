@@ -1,0 +1,26 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ProjectPage from "../../components/ProjectPage.astro";
+
+const projectData = {
+  title: "NOW",
+  description: [
+    "NOW is a commercial produced for a European Union campaign aimed at raising awareness of Georgia’s path toward attaining EU candidate status. The ad highlights the potential cultural and economic benefits of EU membership while urging citizens to demand the necessary political reforms rather than remain content with empty promises.",
+  ],
+  images: [
+    "/src/assets/IMG_5212.jpeg",
+    "/src/assets/IMG_5213.jpeg",
+    "/src/assets/IMG_5215.jpeg",
+    "/src/assets/IMG_5216.jpeg",
+  ],
+  video: {
+    platform: "youtube" as const,
+    id: "SRg_Lg23DWE",
+    title: "NOW",
+  },
+};
+---
+
+<Layout>
+  <ProjectPage {...projectData} />
+</Layout>

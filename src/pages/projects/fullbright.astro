@@ -1,0 +1,26 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ProjectPage from "../../components/ProjectPage.astro";
+
+const projectData = {
+  title: "Fullbright",
+  description: [
+    "This video sponsored by Georgian bank aimed at presenting Fullbright scholarship winners, their workflow and experiences.",
+  ],
+  images: [
+    "/src/assets/IMG_5243.jpeg",
+    "/src/assets/IMG_5244.jpeg",
+    "/src/assets/IMG_5245.jpeg",
+    "/src/assets/IMG_5247.jpeg",
+  ],
+  video: {
+    platform: "facebook" as const,
+    id: "https://www.facebook.com/IDFI.official/videos/1031624878327423/",
+    title: "Fullbright",
+  },
+};
+---
+
+<Layout>
+  <ProjectPage {...projectData} />
+</Layout>

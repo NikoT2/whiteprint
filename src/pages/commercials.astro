@@ -1,0 +1,113 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const commercials = [
+  {
+    id: 1,
+    title: "NOW",
+    image: "/src/assets/IMG_5213.jpeg",
+    link: "/projects/now",
+    fit: "fill",
+  },
+  {
+    id: 2,
+    title: "Discover Gori",
+    image: "/src/assets/IMG_5223.jpeg",
+    link: "/projects/discover-gori",
+    fit: "fill",
+  },
+  {
+    id: 3,
+    title: "Saini",
+    image: "/src/assets/IMG_5201.jpeg",
+    link: "/projects/saini",
+    fit: "fill",
+  },
+  {
+    id: 4,
+    title: "JPG Culture of Printing",
+    image: "/src/assets/IMG_5197.jpeg",
+    link: "/projects/jpg-culture-of-printing",
+    fit: "contain",
+  },
+  {
+    id: 5,
+    title: "Fullbright",
+    image: "/src/assets/IMG_5244.jpeg",
+    link: "/projects/fullbright",
+    fit: "contain",
+  },
+  {
+    id: 6,
+    title: "Thamar de Létay",
+    image: "/src/assets/IMG_5234.jpeg",
+    link: "/projects/thamar-de-letay",
+    fit: "contain",
+  },
+  {
+    id: 7,
+    title: "Banksy",
+    image: "/src/assets/IMG_5226.jpeg",
+    link: "/projects/banksy",
+    fit: "contain",
+  },
+  {
+    id: 8,
+    title: "Optimo",
+    image: "/src/assets/IMG_5250.jpeg",
+    link: "/projects/optimo",
+    fit: "contain",
+  },
+  {
+    id: 9,
+    title: "Agribusiness",
+    image: "/src/assets/IMG_5259.jpeg",
+    link: "/projects/agribusiness",
+    fit: "contain",
+  },
+  {
+    id: 10,
+    title: "Stem Olympics",
+    image: "/src/assets/IMG_5263.jpeg",
+    link: "/projects/stem-olympics",
+    fit: "contain",
+  },
+  {
+    id: 11,
+    title: "Ideatheka",
+    image: "/src/assets/IMG_5238.jpeg",
+    link: "/projects/ideatheka",
+    fit: "contain",
+  },
+];
+---
+
+<Layout>
+  <div class="max-w-6xl mx-auto px-6 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {
+        commercials.map((project) => (
+          <div class="group cursor-pointer">
+            <a href={project.link} class="block">
+              <h3 class="text-base font-bold text-black uppercase tracking-wide mb-2 group-hover:opacity-70 transition-colors">
+                {project.title}
+              </h3>
+              <div class="aspect-[16/9] overflow-hidden relative">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  class="absolute inset-0 w-full h-full object-cover blur-xl scale-110"
+                />
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  class={`relative w-full h-full object-${project.fit} group-hover:scale-105 transition-transform duration-300`}
+                />
+              </div>
+            </a>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</Layout>

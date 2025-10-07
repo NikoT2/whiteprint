@@ -1,0 +1,21 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ProjectPage from "../../components/ProjectPage.astro";
+
+const projectData = {
+  title: "Ideatheka",
+  description: [
+    "The Georgian Bank project, where Dato Gorgiladze gives book recommendations from Ideatheka library. Our goal was to create an engaging and dynamic  presentations for different books, so that presenter’s monologue could  have been matched with exciting and immersive motion graphics.",
+  ],
+  images: ["/src/assets/IMG_5239.jpeg", "/src/assets/IMG_5240.jpeg"],
+  video: {
+    platform: "facebook" as const,
+    id: "https://www.facebook.com/IDFI.official/videos/358992136627657/",
+    title: "Ideatheka",
+  },
+};
+---
+
+<Layout>
+  <ProjectPage {...projectData} />
+</Layout>

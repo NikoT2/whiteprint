@@ -1,0 +1,78 @@
+---
+export interface Props {
+  title: string;
+  description: string[];
+  images: string[];
+  video?: {
+    platform: "vimeo" | "youtube" | "facebook";
+    id: string;
+    title?: string;
+  };
+}
+
+const { title, description, images, video } = Astro.props;
+
+function getVideoEmbedUrl(platform: string, id: string): string {
+  switch (platform) {
+    case "vimeo":
+      return `https://player.vimeo.com/video/${id}?h=${id}`;
+    case "youtube":
+      return `https://www.youtube.com/embed/${id}`;
+    case "facebook":
+      return `https://www.facebook.com/plugins/video.php?href=${encodeURIComponent(id)}`;
+    default:
+      return "";
+  }
+}
+---
+
+<div class="max-w-6xl mx-auto px-6 py-12">
+  <h1 class="text-lg font-extrabold text-black uppercase tracking-wide mb-6">
+    {title}
+  </h1>
+
+  {
+    video && (
+      <div class="mb-12">
+        <div class="aspect-video overflow-hidden">
+          <iframe
+            title={video.title || `${title} video`}
+            src={getVideoEmbedUrl(video.platform, video.id)}
+            width="100%"
+            height="100%"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+            allowfullscreen
+            class="w-full h-full"
+          />
+        </div>
+      </div>
+    )
+  }
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+    <div class="space-y-4">
+      {
+        description.map((paragraph) => (
+          <p class="text-black text-base font-bold leading-relaxed">
+            {paragraph}
+          </p>
+        ))
+      }
+    </div>
+
+    <div class="grid grid-cols-2 gap-4">
+      {
+        images.map((imageSrc, index) => (
+          <div class="aspect-square overflow-hidden relative">
+            <img
+              src={imageSrc}
+              alt={`${title} - Image ${index + 1}`}
+              class="w-full h-full object-cover"
+            />
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</div>

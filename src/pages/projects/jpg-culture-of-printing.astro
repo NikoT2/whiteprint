@@ -1,0 +1,25 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ProjectPage from "../../components/ProjectPage.astro";
+
+const projectData = {
+  title: "JPG Culture of Printing",
+  description: [
+    "JPG is a company specializing in printing designs on clothing. The ad ‘The Culture of Printing’ began as a personal project exploring the integration of 3D modeling techniques into real-world environments. Impressed by the concept, JPG decided to feature their products in the video, which ultimately evolved into a full-scale advertisement",
+  ],
+  images: [
+    "/src/assets/IMG_5196.jpeg",
+    "/src/assets/IMG_5199.jpeg",
+    "/src/assets/IMG_5200.jpeg",
+  ],
+  video: {
+    platform: "vimeo" as const,
+    id: "874511158",
+    title: "JPG Culture of Printing",
+  },
+};
+---
+
+<Layout>
+  <ProjectPage {...projectData} />
+</Layout>

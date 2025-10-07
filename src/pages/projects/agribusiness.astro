@@ -1,0 +1,27 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ProjectPage from "../../components/ProjectPage.astro";
+
+const projectData = {
+  title: "Agribusiness",
+  description: [
+    "A board game by EU created to raise awareness of Georgia’s deep-rooted connections with Europe and to support the country’s path toward European Union integration. Through interactive, double-sided cards featuring key events, reforms, and historical milestones, players engage with the long history of relations between Georgia and Europe.",
+    "The project was delivered under emergency conditions, requiring a full-service development within one week. Our team developed the idea, design, structure, format and advertising materials from the scratch. Seemingly impossible project became an unforgettable feat of our joint group-work and dedicated approach, successfully finishing the project within the deadline. ",
+  ],
+  images: [
+    "/src/assets/IMG_5254.jpeg",
+    "/src/assets/IMG_5256.jpeg",
+    "/src/assets/IMG_5257.jpeg",
+    "/src/assets/IMG_5259.jpeg",
+  ],
+  video: {
+    platform: "facebook" as const,
+    id: "https://www.facebook.com/IDFI.official/videos/7765433676908252/", // embeded do not work
+    title: "Agribusiness",
+  },
+};
+---
+
+<Layout>
+  <ProjectPage {...projectData} />
+</Layout>

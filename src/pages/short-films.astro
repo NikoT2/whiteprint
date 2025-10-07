@@ -1,0 +1,41 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const shortFilms = [
+  {
+    id: 1,
+    title: "LATIMMIER",
+    image:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop",
+    link: "/projects/latimmier",
+  },
+];
+---
+
+<Layout>
+  <div class="max-w-6xl mx-auto px-6 py-12">
+    <h1 class="text-3xl font-bold text-gray-900 uppercase tracking-wide mb-12">
+      Short Films
+    </h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {
+        shortFilms.map((project) => (
+          <div class="group cursor-pointer">
+            <a href={project.link} class="block">
+              <h3 class="text-sm font-medium text-gray-900 uppercase tracking-wide mb-3 group-hover:text-gray-600 transition-colors">
+                {project.title}
+              </h3>
+              <div class="aspect-[4/3] overflow-hidden">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+            </a>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</Layout>

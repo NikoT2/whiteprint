@@ -1,0 +1,27 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ProjectPage from "../../components/ProjectPage.astro";
+
+const projectData = {
+  title: "Optimo",
+  description: [
+    "Bank of Georgia’s project, which presented a digital service for small and  medium businesses. Specifically, through the joint collaboration between Optimo and Mastercard. Optimo offered marketplaces and restaurants an  optimized payment system that was able to track and control payments  with ease and user-friendly accessibility.",
+    "Our main task was to clearly demonstrate a contrast before the use of  Optimo and after. The video shows how the pre-Optimo chaos and confusion turns into a structured, accessible and organized space.",
+  ],
+  images: [
+    "/src/assets/IMG_5249.jpeg",
+    "/src/assets/IMG_5250.jpeg",
+    "/src/assets/IMG_5252.jpeg",
+    "/src/assets/IMG_5253.jpeg",
+  ],
+  video: {
+    platform: "youtube" as const,
+    id: "-X8SVaff0EI",
+    title: "Optimo",
+  },
+};
+---
+
+<Layout>
+  <ProjectPage {...projectData} />
+</Layout>
