@@ -36,13 +36,15 @@ const currentPath = Astro.url.pathname;
             <a
               href="/about"
               class={`text-lg font-extrabold text-black uppercase tracking-wide hover:opacity-70 relative border-b-2 ${
-                currentPath === "/about" ? " border-black" : "border-white"
+                currentPath.startsWith("/about")
+                  ? " border-black"
+                  : "border-white"
               }`}>About</a
             >
             <a
               href="/commercials"
               class={`text-lg font-extrabold text-black uppercase tracking-wide hover:opacity-70 relative border-b-2 ${
-                currentPath === "/commercials"
+                currentPath.startsWith("/commercials")
                   ? " border-black"
                   : "border-white"
               }`}>Commercials</a
@@ -50,14 +52,16 @@ const currentPath = Astro.url.pathname;
             <!-- <a
               href="/short-films"
               class={`text-lg font-extrabold text-black uppercase tracking-wide hover:opacity-70 relative border-b-2${
-                currentPath === '/short-films' ? 'pb-1 border-b-2 border-black' : 'border-white'
+                currentPath.startsWith('/short-films') ? 'pb-1 border-b-2 border-black' : 'border-white'
               }`}
               >Short Film</a
             > -->
             <a
               href="/others"
               class={`text-lg font-extrabold text-black uppercase tracking-wide hover:opacity-70 relative border-b-2${
-                currentPath === "/others" ? " border-black" : "border-white"
+                currentPath.startsWith("/others")
+                  ? " border-black"
+                  : "border-white"
               }`}>Others</a
             >
           </nav>
