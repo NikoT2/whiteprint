@@ -23,10 +23,6 @@ Whiteprint is a minimalist portfolio website featuring:
 ### Installation
 
 ```bash
-# Clone the repository
-git clone <repository-url>
-cd whiteprint
-
 # Install dependencies
 npm install
 

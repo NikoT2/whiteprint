@@ -1,0 +1,28 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ProjectPage from "../../components/ProjectPage.astro";
+
+const projectData = {
+  title: "Saini",
+  description: [
+    "Saini is a company that develops unique Georgian ornaments inspired by the unique appearance of Georgian writing system. With an original technology, that unites geometry, mathematics, and artistic approach to the Georgian script, Saini has created more than 2000 unique ornaments.",
+    "Based on their unique aesthetic approach, they have produced ornaments for high-end dinnerware, lighting, exclusive products for exterior and interior design, jewelry, and custom-made items.",
+    "We sought to show the heart of their uniqueness and style through combining studio shooting and 3D modeling.",
+  ],
+  images: [
+    "/images/IMG_5202.jpeg",
+    "/images/IMG_5203.jpeg",
+    "/images/IMG_5205.jpeg",
+    "/images/IMG_5206.jpeg",
+  ],
+  video: {
+    platform: "vimeo" as const,
+    id: "703870318",
+    title: "Saini",
+  },
+};
+---
+
+<Layout>
+  <ProjectPage {...projectData} />
+</Layout>
