@@ -31,34 +31,22 @@ const currentPath = Astro.url.pathname;
           <nav class="hidden md:flex space-x-8">
             <a
               href="/about"
-              class={`text-lg font-extrabold text-black uppercase tracking-wide hover:opacity-70 relative border-b-2 ${
-                currentPath.startsWith("/about")
-                  ? " border-black"
-                  : "border-white"
-              }`}>About</a
+              class={`text-lg font-extrabold text-black uppercase tracking-wide hover:opacity-70 decoration-2 underline-offset-8 ${currentPath.startsWith("/about") ? "underline" : ""}`}
+              >About</a
             >
             <a
               href="/commercials"
-              class={`text-lg font-extrabold text-black uppercase tracking-wide hover:opacity-70 relative border-b-2 ${
-                currentPath.startsWith("/commercials")
-                  ? " border-black"
-                  : "border-white"
-              }`}>Commercials</a
+              class={`text-lg font-extrabold text-black uppercase tracking-wide hover:opacity-70 decoration-2 underline-offset-8 ${currentPath.startsWith("/commercials") ? "underline" : ""}`}
+              >Commercials</a
             >
             <!-- <a
               href="/short-films"
-              class={`text-lg font-extrabold text-black uppercase tracking-wide hover:opacity-70 relative border-b-2${
-                currentPath.startsWith('/short-films') ? 'pb-1 border-b-2 border-black' : 'border-white'
-              }`}
-              >Short Film</a
-            > -->
+              class={`text-lg font-extrabold text-black uppercase tracking-wide hover:opacity-70 font-bold decoration-2 underline-offset-5 ${currentPath.startsWith('/short-films') ? 'underline' : ''}`}
+            >Short Film</a> -->
             <a
               href="/others"
-              class={`text-lg font-extrabold text-black uppercase tracking-wide hover:opacity-70 relative border-b-2${
-                currentPath.startsWith("/others")
-                  ? " border-black"
-                  : "border-white"
-              }`}>Others</a
+              class={`text-lg font-extrabold text-black uppercase tracking-wide hover:opacity-70 decoration-2 underline-offset-8 ${currentPath.startsWith("/others") ? "underline" : ""}`}
+              >Others</a
             >
           </nav>
 
