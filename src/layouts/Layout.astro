@@ -18,15 +18,11 @@ const currentPath = Astro.url.pathname;
         <div class="flex justify-between items-center">
           <div class="flex flex-col">
             <a
-              class="text-base cursor-pointer hover:opacity-70 font-bold text-black uppercase tracking-wide"
+              class={`text-base w-fit cursor-pointer hover:opacity-70 font-bold text-black border-b-2 pr-1 ${currentPath === "/" ? "border-black" : "border-transparent"} uppercase tracking-wide`}
               href="/"
             >
               SILVERFIELD
             </a>
-            <div
-              class={`w-27 h-0.5  ${currentPath === "/" ? "bg-black" : "bg-white"}`}
-            >
-            </div>
             <a
               class="hover:opacity-70 cursor-pointer text-base font-bold text-black"
               href="mailto:Nikoloz@Silverfield.com">Nikoloz@Silverfield.com</a
