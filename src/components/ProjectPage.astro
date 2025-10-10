@@ -69,20 +69,31 @@ function getAspectRatioValue(aspectRatio?: string): string {
     )
   }
 
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-    <div class="space-y-4">
-      {
-        description.map((paragraph) => (
-          <p class="text-black text-base font-bold leading-relaxed">
-            {paragraph}
-          </p>
-        ))
-      }
-    </div>
-
-    <div class="grid grid-cols-2 gap-4">
-      {
-        images.map((imageSrc, index) => (
+  {
+    description.length > 0 ? (
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div class="space-y-4">
+          {description.map((paragraph) => (
+            <p class="text-black text-base font-bold leading-relaxed">
+              {paragraph}
+            </p>
+          ))}
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          {images.map((imageSrc, index) => (
+            <div class="aspect-square overflow-hidden relative">
+              <img
+                src={imageSrc}
+                alt={`${title} - Image ${index + 1}`}
+                class="w-full h-full object-cover"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    ) : (
+      <div class="grid grid-cols-4 gap-4">
+        {images.map((imageSrc, index) => (
           <div class="aspect-square overflow-hidden relative">
             <img
               src={imageSrc}
@@ -90,8 +101,8 @@ function getAspectRatioValue(aspectRatio?: string): string {
               class="w-full h-full object-cover"
             />
           </div>
-        ))
-      }
-    </div>
-  </div>
+        ))}
+      </div>
+    )
+  }
 </div>
