@@ -16,18 +16,12 @@ const currentPath = Astro.url.pathname;
     <header class="border-b border-black py-6">
       <div class="max-w-6xl mx-auto px-6">
         <div class="flex justify-between items-center">
-          <div class="flex flex-col">
-            <a
-              class={`text-base w-fit cursor-pointer hover:opacity-70 font-bold decoration-2 underline-offset-5 text-black ${currentPath === "/" ? "underline" : ""} uppercase tracking-wide`}
-              href="/"
-            >
-              SILVERFIELD
-            </a>
-            <a
-              class="hover:opacity-70 cursor-pointer text-base font-bold text-black"
-              href="mailto:Nikoloz@Silverfield.co">Nikoloz@Silverfield.co</a
-            >
-          </div>
+          <a
+            class={`text-lg font-extrabold text-black uppercase tracking-wide hover:opacity-70 decoration-2 underline-offset-8 ${currentPath === "/" ? "underline" : ""}`}
+            href="/"
+          >
+            SILVERFIELD
+          </a>
           <nav class="hidden md:flex space-x-8">
             <a
               href="/about"
@@ -39,10 +33,6 @@ const currentPath = Astro.url.pathname;
               class={`text-lg font-extrabold text-black uppercase tracking-wide hover:opacity-70 decoration-2 underline-offset-8 ${currentPath.startsWith("/commercials") ? "underline" : ""}`}
               >Commercials</a
             >
-            <!-- <a
-              href="/short-films"
-              class={`text-lg font-extrabold text-black uppercase tracking-wide hover:opacity-70 font-bold decoration-2 underline-offset-5 ${currentPath.startsWith('/short-films') ? 'underline' : ''}`}
-            >Short Film</a> -->
             <a
               href="/others"
               class={`text-lg font-extrabold text-black uppercase tracking-wide hover:opacity-70 decoration-2 underline-offset-8 ${currentPath.startsWith("/others") ? "underline" : ""}`}
