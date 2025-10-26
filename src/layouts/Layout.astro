@@ -34,6 +34,11 @@ const currentPath = Astro.url.pathname;
               >Commercials</a
             >
             <a
+              href="/photography"
+              class={`text-lg font-extrabold text-black uppercase tracking-wide hover:opacity-70 decoration-2 underline-offset-8 ${currentPath.startsWith("/photography") ? "underline" : ""}`}
+              >Photography</a
+            >
+            <a
               href="/others"
               class={`text-lg font-extrabold text-black uppercase tracking-wide hover:opacity-70 decoration-2 underline-offset-8 ${currentPath.startsWith("/others") ? "underline" : ""}`}
               >Others</a
@@ -62,6 +67,11 @@ const currentPath = Astro.url.pathname;
               href="/commercials"
               class={`text-lg font-extrabold text-black uppercase tracking-wide hover:opacity-70 relative `}
               >Commercials</a
+            >
+            <a
+              href="/photography"
+              class={`text-lg font-extrabold text-black uppercase tracking-wide hover:opacity-70 relative `}
+              >Photography</a
             >
             <a
               href="/others"
